@@ -1,12 +1,12 @@
 package UML_Polymorphism;
 
-public class DVD extends Video{
+public class DVD extends Item {
 
-    private String director;
+    private final String director;
 
 
     public DVD (String title, String director,int playingTime) {
-        super(title,director,playingTime,VideoType.DVD);
+        super(title,director,playingTime, MediaType.DVD);
         this.director = director;
     }
 

@@ -1,14 +1,14 @@
 package UML_Polymorphism;
 
-public class Video {
+public class Item implements ItemInterface{
     public String comment;
     public boolean gotIt;
     public int playingTime;
     public String title;
-    private Enum<VideoType> type;
-    private String director;
+    private final Enum<MediaType> type;
+    private final String director;
 
-    public Video(String title, String director,int playingTime, Enum<VideoType> type) {
+    public Item(String title, String director, int playingTime, Enum<MediaType> type) {
         this.title = title;
         this.playingTime = playingTime;
         this.director = director;
@@ -22,7 +22,6 @@ public class Video {
     public boolean getOwn() {
         return gotIt;
     }
-
 
     public void print() {
         System.out.print(
